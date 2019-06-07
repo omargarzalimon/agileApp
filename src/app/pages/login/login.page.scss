@@ -1,0 +1,43 @@
+ion-grid{
+    height: 100%;
+}
+
+ion-content{
+    --padding-end: 53px;
+    --padding-start: 53px;  
+}
+
+#agileLogoRow{
+    margin-top:25%;
+    height: 70%;
+}
+
+#formLog{
+    margin-top: 10%;
+}
+
+
+#btnLogin{
+    margin-top: 13%;
+    font-family: 'IBM Plex Sans Condensed Regular';
+    font-size: 1.2em;
+}
+
+ion-item{
+    --padding-start: 0px;
+    --border-color: var(--ion-color-m1);
+    color: var(--ion-color-s4);
+}
+
+ion-item ion-label{
+    --color: var(--ion-color-m1);
+}
+
+ion-footer{
+    margin-bottom: 10%;
+}
+
+#footImg{
+    width: 30%;
+    margin: 0 auto;
+}

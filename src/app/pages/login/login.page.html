@@ -1,0 +1,72 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<!-- <app-header titulo="Login"></app-header> -->
+
+<ion-content scrollY="false">
+  <ion-grid>
+    <ion-row id="agileLogoRow" align-items-center> <!--//align-items-baseline-->
+      <ion-col size="12">
+        <ion-img src="../assets/imgs/agile.svg"></ion-img>
+      </ion-col>
+      <ion-col size="12" id="formLog">
+          <form
+          #formulario="ngForm"
+          (ngSubmit)="onSubmitTemplate()"
+        >
+          <ion-list>
+            <!-- <ion-list-header>
+              <ion-label>Formulario Template: Valido {{formulario.valid}}</ion-label>
+            </ion-list-header> -->
+            <ion-item>
+              
+              <ion-label position="floating">Email</ion-label>
+              <ion-input
+                type="email"
+                name="email"
+                pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                [(ngModel)]="usuario.email"
+                required
+      
+              ></ion-input>
+              
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Password</ion-label>
+        
+                <ion-input
+                  type="password"
+                  name="password"
+                  [(ngModel)]="usuario.password"
+                  required
+        
+                ></ion-input>
+              </ion-item>
+          </ion-list>
+          <ion-button id="btnLogin" expand="full" 
+                      type="submit"
+                      [disabled]="formulario.invalid"
+                      color="s1"
+                      size="large"
+                      >
+            Login
+          </ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+
+    
+  </ion-grid>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar >
+    <ion-img id="footImg" src="../assets/imgs/logoabinbev.svg"></ion-img>
+  </ion-toolbar>
+</ion-footer>

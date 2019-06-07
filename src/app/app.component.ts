@@ -16,7 +16,37 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
+      title: 'Course',
+      url: '/list',
+      icon: 'list'
+    },
+    {
+      title: 'Videos',
+      url: '/list',
+      icon: 'list'
+    },
+    {
+      title: 'Social Media',
+      url: '/list',
+      icon: 'list'
+    },
+    {
+      title: 'Profile',
+      url: '/list',
+      icon: 'list'
+    },
+    {
+      title: 'Glossary',
+      url: '/list',
+      icon: 'list'
+    },
+    {
+      title: 'About',
+      url: '/list',
+      icon: 'list'
+    },
+    {
+      title: 'Privacy Policy',
       url: '/list',
       icon: 'list'
     }
