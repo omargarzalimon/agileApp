@@ -1,14 +1,22 @@
-<ion-header no-border translucent>
+<ion-header
+  no-border="no-border"
+  translucent="translucent"
+>
   <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-back-button defaultHref="/"></ion-back-button>
-      
-    </ion-buttons>
     <ion-buttons slot="start">
-      <ion-menu-button mode="ios" name="ios-menu-outline"></ion-menu-button>
-      
+      <ion-menu-button
+        mode="ios"
+        name="ios-menu-outline"
+      ></ion-menu-button>
     </ion-buttons>
 
-    <ion-title text-capitalize color="m1">{{titulo}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title
+      text-capitalize="text-capitalize"
+      color="m1"
+    >{{titulo}}</ion-title>
   </ion-toolbar>
 </ion-header>
