@@ -22,9 +22,6 @@
     <ion-list-header *ngFor="let i of course.modulos; let ind = index">
       <ion-label>{{i.name}}</ion-label>
     </ion-list-header>
-    <!-- <ion-list-header *ngFor="let i of course.modulos[i].unidades; let i = index">
-        <ion-label>kjhsakd</ion-label>
-    </ion-list-header> -->
     <ion-item *ngFor="let item of course.modulos[0].unidades[0].content">
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
       <ion-label>{{item.title}}</ion-label>
