@@ -1,0 +1,33 @@
+<ion-header
+  no-border="no-border"
+  translucent="translucent"
+>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button
+        mode="ios"
+        name="ios-menu-outline"
+      ></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title
+      text-capitalize="text-capitalize"
+      color="m1"
+    >Course</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none"> 
+    <ion-list-header *ngFor="let i of course.modulos; let ind = index">
+      <ion-label>{{i.name}}</ion-label>
+    </ion-list-header>
+    <!-- <ion-list-header *ngFor="let i of course.modulos[i].unidades; let i = index">
+        <ion-label>kjhsakd</ion-label>
+    </ion-list-header> -->
+    <ion-item *ngFor="let item of course.modulos[0].unidades[0].content">
+      <ion-icon [name]="item.icon" slot="start"></ion-icon>
+      <ion-label>{{item.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
