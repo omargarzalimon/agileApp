@@ -3,11 +3,35 @@
     border-color: var(--ion-color-danger);
 }
 
-ion-content ion-title {
-    padding: 15px 0px;
-    position: relative;
-    font-size: 2em;
-    text-align: center;
-    border-bottom: 1px solid;
-    border-color: #ff5300;
+/* HEADER  ESTILOS*/
+ion-menu-button{
+    --color: var(--ion-color-m1);
 }
+
+ion-header ion-title {
+    color:  var(--ion-color-m1);
+    text-align: center;
+}
+
+/* CONTENIDO  ESTILOS*/
+ion-content ion-title {
+    letter-spacing: .02em;
+    padding: 15px 0px 10px 0px;
+    position: relative;
+    font-size: 1.5em;
+    text-align: left;
+    border-bottom: 1px solid;
+    border-color: var(--ion-color-m1);
+    font-family: 'IBM Plex Sans Medium';
+    color: var(--ion-color-s3); 
+}
+
+#articlecontent {
+    padding: 0% 8%;
+    color: var(--ion-color-s3);
+}
+
+#articlecontent p {
+    line-height: 1.5em;
+}
+
