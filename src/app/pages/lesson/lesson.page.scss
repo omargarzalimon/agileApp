@@ -1,0 +1,13 @@
+#prueba ion-col {
+    border: 1px solid;
+    border-color: var(--ion-color-danger);
+}
+
+ion-content ion-title {
+    padding: 15px 0px;
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-color: #ff5300;
+}
