@@ -8,11 +8,9 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
-<<<<<<< HEAD
-  { path: 'course', loadChildren: './pages/course/course.module#CoursePageModule' },  { path: 'dashboard3', loadChildren: './pages/dashboard3/dashboard3.module#Dashboard3PageModule' }
-=======
-  { path: 'course', loadChildren: './pages/course/course.module#CoursePageModule' },  { path: 'lesson', loadChildren: './pages/lesson/lesson.module#LessonPageModule' }
->>>>>>> develop
+  { path: 'course', loadChildren: './pages/course/course.module#CoursePageModule' },
+  { path: 'dashboard3', loadChildren: './pages/dashboard3/dashboard3.module#Dashboard3PageModule' },
+  { path: 'lesson', loadChildren: './pages/lesson/lesson.module#LessonPageModule' }
 
 ];
 
