@@ -42,12 +42,12 @@ export class AppComponent {
     },
     {
       title: 'About',
-      url: '/course',
+      url: '/about',
       index: 6
     },
     {
       title: 'Privacy Policy',
-      url: '/course',
+      url: '/privacy-policy',
       index: 7
     }
   ];
