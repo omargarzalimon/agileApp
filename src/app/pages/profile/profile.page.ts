@@ -40,7 +40,6 @@ export class ProfilePage implements OnInit {
       campo: 'porcentaje',
        data: '.8'
     }
-   
   ];
 
   constructor() { }
