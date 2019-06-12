@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'lesson', loadChildren: './pages/lesson/lesson.module#LessonPageModule' },
   { path: 'videos', loadChildren: './pages/videos/videos.module#VideosPageModule' },
   { path: 'exercise', loadChildren: './pages/exercise/exercise.module#ExercisePageModule' },
-  { path: 'infographic', loadChildren: './pages/infographic/infographic.module#InfographicPageModule' }
+  { path: 'infographic', loadChildren: './pages/infographic/infographic.module#InfographicPageModule' },
+  { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' }
 
 
 ];
