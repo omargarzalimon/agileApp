@@ -14,6 +14,8 @@ const routes: Routes = [
   { path: 'videos', loadChildren: './pages/videos/videos.module#VideosPageModule' },
   { path: 'exercise', loadChildren: './pages/exercise/exercise.module#ExercisePageModule' },
   { path: 'infographic', loadChildren: './pages/infographic/infographic.module#InfographicPageModule' },
+  { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },
+  { path: 'glossary', loadChildren: './pages/glossary/glossary.module#GlossaryPageModule' },
   { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },  { path: 'photo-profile', loadChildren: './pages/photo-profile/photo-profile.module#PhotoProfilePageModule' }
 
 

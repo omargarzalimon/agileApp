@@ -7,7 +7,11 @@
 
 :root {
   
-
+  .desseleccionadoMenu{
+    color: black;
+    border-left: transparent;
+    font-family: 'IBM Plex Sans Condensed Regular Italic';
+  }
   --ion-font-family: 'IBM Plex Sans Condensed Light';
   // --ion-grid-padding: 0px;
 
