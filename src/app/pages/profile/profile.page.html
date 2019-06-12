@@ -23,7 +23,7 @@
         <img   src="../../../assets/imgs/wen@2x.png">
       </ion-avatar> 
       <button  id="add-img-profile">    
-       <ion-icon style="display:initial"  color="m1" mode="ios"  name="add"></ion-icon>
+       <ion-icon style="display:initial" routerLink="/photo-profile"  color="m1" mode="ios"  name="add"></ion-icon>
       </button >
 
     </div>
@@ -37,27 +37,43 @@
               </ion-col>
               <ion-col size="7" >
                   <ion-text color="m1"  >
-                    <p style="font-size: 30px;font-weight: bold" >1800 pts</p>
+                    <p style="font-size: 30px;font-weight: bold" >{{profile[5].data}} pts</p>
                   </ion-text>
               </ion-col>
             </ion-row>
            
           </ion-col>
         </ion-row>
+
         <ion-row>
-          <div style="width:100%;padding-left:48%">
-              <ion-icon  color="m1" style="font-size:20px" name="flame"></ion-icon>
+           
+       
+          
+        <ion-col  [size]="(profile[6].data*12)"  >
+          
+            <ion-icon id="flame" color="m1"   name="flame"></ion-icon>
 
-
-          </div>
-          <ion-progress-bar mode="md" color="m1" value="0.5"></ion-progress-bar> 
+          </ion-col>
+       
+          <ion-progress-bar mode="md" color="m1" [value]="profile[6].data"></ion-progress-bar> 
             
         </ion-row>
         
    </ion-grid>
-   <ion-grid style="padding-left: 50px" *ngFor="let p of profile">
-     <ion-row style="height: 30px" ><p style="color:lightslategrey">{{p.campo}}</p></ion-row>
-     <ion-row style="height: 30px"><p>{{p.data}}</p></ion-row>
+
+
+   
+   <ion-grid style="padding-left: 50px" >
+    <ion-row style="height: 30px" ><p style="color:lightslategrey">ID</p></ion-row>
+     <ion-row style="height: 30px"><p>{{profile[0].data}}</p></ion-row>
+     <ion-row style="height: 30px" ><p style="color:lightslategrey">Name</p></ion-row>
+     <ion-row style="height: 30px"><p>{{profile[1].data}}</p></ion-row>
+     <ion-row style="height: 30px" ><p style="color:lightslategrey">E-mail</p></ion-row>
+     <ion-row style="height: 30px"><p>{{profile[2].data}}</p></ion-row>
+     <ion-row style="height: 30px" ><p style="color:lightslategrey">Zone</p></ion-row>
+     <ion-row style="height: 30px"><p>{{profile[3].data}}</p></ion-row>
+     <ion-row style="height: 30px" ><p style="color:lightslategrey">Process</p></ion-row>
+     <ion-row style="height: 30px"><p>{{profile[4].data}}</p></ion-row>
    </ion-grid>
    <div style="height: 100px" >
     

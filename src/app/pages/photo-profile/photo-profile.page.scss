@@ -1,12 +1,12 @@
 #topcolor{
-    height: 125px;
+    height: 251px;
     width: 100%;
     background-color: #DA5813;
 }
 #avatar{
-    width: 55%;
+    width: 90%;
     margin: auto;
-    margin-top: -125px;
+    margin-top: -175px;
     max-width: 300px;
 }
 #img-profile{
@@ -19,11 +19,19 @@
 }
 #add-img-profile{
     margin-top:-90px;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     position:relative; 
     left:70%;
     top:-20px;
+    background-color: white;
+    border-radius: 100px;
+    border: 1px solid #DA5813;
+
+}
+#btn-checkmark{
+    width: 70px;
+    height: 70px;
     background-color: white;
     border-radius: 100px;
     border: 1px solid #DA5813;
@@ -49,9 +57,5 @@ ion-progress-bar{
     --background:#ffffff;
     --buffer-background :#ffffff;
      border: 1px solid #DA5813;
-}
-#flame{
-    font-size:20px;
-    float: right;
-    margin-right:-15px;
+
 }
