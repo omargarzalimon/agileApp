@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'infographic', loadChildren: './pages/infographic/infographic.module#InfographicPageModule' },
   { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },
   { path: 'glossary', loadChildren: './pages/glossary/glossary.module#GlossaryPageModule' },
-  { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },  { path: 'photo-profile', loadChildren: './pages/photo-profile/photo-profile.module#PhotoProfilePageModule' }
+  { path: 'photo-profile', loadChildren: './pages/photo-profile/photo-profile.module#PhotoProfilePageModule' }
 
 
 
