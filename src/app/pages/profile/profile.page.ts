@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class ProfilePage implements OnInit {
   
+  puntos= 1800;
 
 
   public profile = [
@@ -34,17 +35,19 @@ export class ProfilePage implements OnInit {
     },
     {
       campo: 'puntos',
-       data: '1800'
+       data: '1300'
     },
     {
-      campo: 'porcentaje',
-       data: '.8'
+      campo: 'progress',
+       data: '.2'
     }
   ];
 
   constructor() { }
 
   ngOnInit() {
+   
+
   }
 
 }
