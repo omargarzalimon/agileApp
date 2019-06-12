@@ -30,13 +30,14 @@
     </div>
     
 
-     <ion-item class="itemsUnit" *ngFor="let item of course.modulos[0].unidades[0].content">
+     <ion-item class="itemsUnit" *ngFor="let item of course.modulos[0].unidades[0].content" 
+     [routerLink]="item.route" detail="false">
       <ion-icon
+        mode="ios"
         [name]="item.icon"
         slot="start"
         [color]="item.color"
       ></ion-icon>
-
       <ion-label [color]="item.color">{{item.title}}</ion-label>
      
     </ion-item>
