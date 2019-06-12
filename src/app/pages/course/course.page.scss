@@ -8,6 +8,7 @@ ion-item{
 
 ion-item.backModule{
     --background: rgba(174,181,188, 0.1);
+    --padding-start: 25px;
 }
 
 .module{
@@ -28,16 +29,9 @@ ion-item.backModule{
 .units{
     font-style: italic;
     font-size: 16px;
+    color: var(--ion-color-s3);
 }
 
 .itemsUnit{
     --padding-start: 35px;
-}
-
-.selected{
-    border-left: 5px solid;
-}
-
-.unselected{
-
 }

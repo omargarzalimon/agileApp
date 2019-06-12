@@ -6,7 +6,6 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./course.page.scss'],
 })
 export class CoursePage implements OnInit {
-  el;
   noBorder = { 'border-left': '0' };
   course =
     {
@@ -21,7 +20,7 @@ export class CoursePage implements OnInit {
                   icon: 'document',
                   title: 'Morbi accumsan ultrices arcu',
                   color: 's1',
-                  route: ''
+                  route: '/lesson'
                 },
                 {
                   icon: 'videocam',
@@ -33,13 +32,13 @@ export class CoursePage implements OnInit {
                   icon: 'logo-game-controller-b',
                   title: 'Integer iaculis justo eget',
                   color: 's7',
-                  route: '/login'
+                  route: '/exercise'
                 },
                 {
                   icon: 'image',
                   title: 'Lorem ipsum dolor sit amet',
                   color: 'm2',
-                  route: '/login'
+                  route: '/infographic'
                 },
                 {
                   icon: 'document',
@@ -99,17 +98,6 @@ export class CoursePage implements OnInit {
     console.log(this.element);
   }
   onClick(event) {
-    console.log(event);
-    // // console.log(param);
-    // const el = document.getElementById(param);
-    // console.log(this.el);
-    // this.element = this.el;
-
-    // this.element.classList.add('selected');
-    // // if (param === 'm1u1el5') {
-    // //   this.mylblRef.color = 's1';
-    // // }
-    // // this.noBorder = { 'border-left': '5px solid var(--ion-color-s3)'};
   }
 
 }

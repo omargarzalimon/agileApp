@@ -1,0 +1,72 @@
+<ion-header
+  no-border="no-border"
+  translucent="translucent"
+>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button
+        mode="ios"
+        name="ios-menu-outline"
+      ></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title
+      text-capitalize="text-capitalize"
+      color="m1"
+    >Glossary</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item class="backModule">
+      <ion-label class="module">Module 1</ion-label>
+    </ion-item>
+
+    <div class="unitHeader">
+      <ion-list-header class="ion-no-padding">
+        <ion-label class="units ion-text-capitalize">Unit 1</ion-label>
+      </ion-list-header>
+    </div>
+
+    <ion-item
+      class="itemsUnit"
+      *ngFor="let item of glossary[0].unit"
+      [routerLink]="item.route"
+      detail="false"
+    >
+      <ion-icon
+        mode="ios"
+        [name]="item.icon"
+        slot="start"
+        [color]="item.color"
+      ></ion-icon>
+
+      <ion-label color="s3">{{item.text}}</ion-label>
+    </ion-item>
+
+    <!-- Unidad2 -->
+
+    <div class="unitHeader">
+      <ion-list-header class="ion-no-padding">
+        <ion-label class="units ion-text-capitalize">Unit 2</ion-label>
+      </ion-list-header>
+    </div>
+
+    <ion-item
+      class="itemsUnit"
+      *ngFor="let item of glossary[1].unit"
+      [routerLink]="item.route"
+      detail="false"
+    >
+      <ion-icon 
+        mode="ios"
+        [name]="item.icon"
+        slot="start"
+        [color]="item.color"
+      ></ion-icon>
+
+      <ion-label color="s3">{{item.text}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
