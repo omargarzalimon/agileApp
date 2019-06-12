@@ -32,7 +32,7 @@ export class AppComponent {
     },
     {
       title: 'Profile',
-      url: '/list',
+      url: '/profile',
       icon: 'list'
     },
     {
