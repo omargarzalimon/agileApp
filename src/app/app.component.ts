@@ -37,7 +37,7 @@ export class AppComponent {
     },
     {
       title: 'Glossary',
-      url: '/glosary',
+      url: '/glossary',
       index: 5
     },
     {
@@ -68,18 +68,16 @@ export class AppComponent {
   }
 
   seleccion(index){
-    var i = 0;
-    for ( i = 0; i < 8; i++) {
-      if (i == index) {
-        console.log(i + "rojo");
-        document.getElementById(i).style.color = "#F55000";
-        document.getElementById(i).style.borderLeft = "solid 3px #F55000";
-        document.getElementById(i).style.fontStyle = "oblique";
-      }else{
-        console.log(i + "gris");
-        document.getElementById(i).style.color = "black";
-        document.getElementById(i).style.borderLeft = "transparent";
-        document.getElementById(i).style.fontStyle = "normal";
+    
+    for (let i = 0; i < 8; i++) {
+      if (i === index) {
+        document.getElementById(i.toString()).style.color = "#F55000";
+        document.getElementById(i.toString()).style.borderLeft = "solid 3px #F55000";
+        document.getElementById(i.toString()).style.fontStyle = "oblique";
+      } else {
+        document.getElementById(i.toString()).style.color = "black";
+        document.getElementById(i.toString()).style.borderLeft = "transparent";
+        document.getElementById(i.toString()).style.fontStyle = "normal";
       }
     }
   }
