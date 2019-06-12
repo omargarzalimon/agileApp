@@ -1,5 +1,7 @@
 {
   "name": "agileApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -35,9 +35,14 @@ ion-item ion-label{
 
 ion-footer{
     margin-bottom: 10%;
+    position: relative;
 }
 
 #footImg{
     width: 30%;
     margin: 0 auto;
+}
+
+.scroll-content{
+    padding-bottom: 0 !important;
 }
