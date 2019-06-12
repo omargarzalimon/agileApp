@@ -12,22 +12,22 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
+      url: '/login',
       icon: 'home'
     },
     {
       title: 'Course',
-      url: '/list',
+      url: '/course',
       icon: 'list'
     },
     {
       title: 'Videos',
-      url: '/list',
+      url: '/course',
       icon: 'list'
     },
     {
       title: 'Social Media',
-      url: '/list',
+      url: '/course',
       icon: 'list'
     },
     {
@@ -37,17 +37,17 @@ export class AppComponent {
     },
     {
       title: 'Glossary',
-      url: '/list',
+      url: '/course',
       icon: 'list'
     },
     {
       title: 'About',
-      url: '/list',
+      url: '/course',
       icon: 'list'
     },
     {
       title: 'Privacy Policy',
-      url: '/list',
+      url: '/course',
       icon: 'list'
     }
   ];

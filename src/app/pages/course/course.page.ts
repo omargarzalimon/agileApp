@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-course',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course.page.scss'],
 })
 export class CoursePage implements OnInit {
-
+  el;
+  noBorder = { 'border-left': '0' };
   course =
     {
       modulos: [
@@ -19,12 +20,32 @@ export class CoursePage implements OnInit {
                 {
                   icon: 'document',
                   title: 'Morbi accumsan ultrices arcu',
-                  color: 's1'
+                  color: 's1',
+                  route: ''
                 },
                 {
                   icon: 'videocam',
-                  title: 'Morbi accumsan ultrices',
-                  color: 's1'
+                  title: 'Donec quis enim sagittis',
+                  color: 's6',
+                  route: '/login'
+                },
+                {
+                  icon: 'logo-game-controller-b',
+                  title: 'Integer iaculis justo eget',
+                  color: 's7',
+                  route: '/login'
+                },
+                {
+                  icon: 'image',
+                  title: 'Lorem ipsum dolor sit amet',
+                  color: 'm2',
+                  route: '/login'
+                },
+                {
+                  icon: 'document',
+                  title: 'Nunc gravida pulvinar urna',
+                  color: 's3',
+                  route: '/login'
                 }
               ]
             },
@@ -72,9 +93,23 @@ export class CoursePage implements OnInit {
         }
       ]
     };
-  constructor() { }
+  constructor(private element: ElementRef) { }
 
   ngOnInit() {
+    console.log(this.element);
+  }
+  onClick(event) {
+    console.log(event);
+    // // console.log(param);
+    // const el = document.getElementById(param);
+    // console.log(this.el);
+    // this.element = this.el;
+
+    // this.element.classList.add('selected');
+    // // if (param === 'm1u1el5') {
+    // //   this.mylblRef.color = 's1';
+    // // }
+    // // this.noBorder = { 'border-left': '5px solid var(--ion-color-s3)'};
   }
 
 }
