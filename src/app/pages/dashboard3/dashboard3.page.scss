@@ -1,0 +1,134 @@
+ion-grid{
+    padding: 0px;
+}
+ion-menu-button{
+    --color: var(--ion-color-m1);
+}
+ion-toolbar{
+    --border-color: transparent;
+}
+#porcentaje{
+    width: 100%;
+    height: 40px;
+    border: solid 1px  #F55000;
+    border-bottom: transparent;
+    border-right: transparent;
+    --buffer-background: white;
+    --progress-background: var(--ion-color-c7);
+     
+}
+
+#puntos{
+    font-size: 30PX;
+    font-family: "IBM Plex Sans Condensed Regular";
+}
+.icono{
+    margin-right: 10px; 
+    font-size: 25px;
+    color: gray;
+}
+.profile{
+    margin: 0px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    border: solid 1px  #F55000;
+    padding: 5px;
+    z-index: 2;
+    position: relative;
+}
+
+#addph{
+    position: relative;
+    z-index: 3;
+    margin-top: -15%;
+    margin-left: 60%;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: solid 1px  #F55000;
+    color: #F55000;
+    font-size: 40px;
+    padding: 0px;
+    background: white;
+}
+
+.addprofile{
+    margin: 10%;
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    border: solid 1px  #F55000;
+    padding: 5px;
+}
+
+#flame{
+    font-size:40px;
+    width: 35%;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+    color:  #F55000;
+}
+
+.rejilla{
+    text-align: center;
+    height: 100%;
+    border: solid 1px #F55000;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+}
+.rejilla2{
+    height: 100%;
+    padding: 0px;
+    border-left: solid 1px #F55000;
+}
+.iconoption{
+    color: #F55000;
+    font-size: 40px;
+}
+.options{
+    width: 100%;
+    height: 100%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    font-family: "IBM Plex Sans Condensed Regular";
+    text-align: center;
+    color: #2A323F;
+    border: solid 1px #F55000;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: transparent;
+    margin: 0px;
+    font-size: 15px
+}
+.ultimaop{
+    border-bottom: solid 1px #F55000;
+}
+#contenedor{
+    background-image: url('../../../assets/imgs/dashboard_background_DASH.png');
+    background-repeat: no-repeat, repeat;
+    background-color: white;
+    background-position: 80% -10%;
+    height: 100%;
+    text-align: center;
+}
+
+.name{
+    color: var(--ion-color-m1);
+    font-weight: "IBM Plex Sans Condensed Regular Italic";
+    font-size: 20px;
+}
+
+.lname{
+    color: black;
+    font-weight: "IBM Plex Sans Condensed Regular Italic";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.prueba{
+    margin-top: 10px;
+    text-align: center;
+}

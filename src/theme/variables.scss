@@ -7,7 +7,11 @@
 
 :root {
   
-
+  .desseleccionadoMenu{
+    color: black;
+    border-left: transparent;
+    font-family: 'IBM Plex Sans Condensed Regular Italic';
+  }
   --ion-font-family: 'IBM Plex Sans Condensed Light';
   // --ion-grid-padding: 0px;
 
@@ -210,8 +214,24 @@
   --ion-color-c6-contrast-rgb: 255,255,255;
   --ion-color-c6-shade: #470cc7;
   --ion-color-c6-tint: #6226e5;
+
+  //c7
+  --ion-color-c7: #F55000;
+  --ion-color-c7-rgb: 245,80,0;
+  --ion-color-c7-contrast: #ffffff;
+  --ion-color-c7-contrast-rgb: 255,255,255;
+  --ion-color-c7-shade: #d84600;
+  --ion-color-c7-tint: #f6621a;
 }
 
+.ion-color-c7{
+  --ion-color-base: var(--ion-color-c7) !important;
+  --ion-color-base-rgb: var(--ion-color-c7-rgb) !important;
+  --ion-color-contrast: var(--ion-color-c7-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-c7-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-c7-shade) !important;
+  --ion-color-tint: var(--ion-color-c7-tint) !important;
+}
 .ion-color-m1{
   --ion-color-base: var(--ion-color-m1) !important;
   --ion-color-base-rgb: var(--ion-color-m1-rgb) !important;

@@ -12,43 +12,43 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
-      icon: 'home'
+      url: '/dashboard3',
+      index: 0
     },
     {
       title: 'Course',
-      url: '/list',
-      icon: 'list'
+      url: '/course',
+      index: 1
     },
     {
       title: 'Videos',
-      url: '/list',
-      icon: 'list'
+      url: '/videos',
+      index: 2
     },
     {
       title: 'Social Media',
-      url: '/list',
-      icon: 'list'
+      url: '/course',
+      index: 3
     },
     {
       title: 'Profile',
-      url: '/list',
-      icon: 'list'
+      url: '/profile',
+      index: 4
     },
     {
       title: 'Glossary',
-      url: '/list',
-      icon: 'list'
+      url: '/glossary',
+      index: 5
     },
     {
       title: 'About',
-      url: '/list',
-      icon: 'list'
+      url: '/about',
+      index: 6
     },
     {
       title: 'Privacy Policy',
-      url: '/list',
-      icon: 'list'
+      url: '/privacy-policy',
+      index: 7
     }
   ];
 
@@ -66,4 +66,20 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  seleccion(index){
+    
+    for (let i = 0; i < 8; i++) {
+      if (i === index) {
+        document.getElementById(i.toString()).style.color = "#F55000";
+        document.getElementById(i.toString()).style.borderLeft = "solid 3px #F55000";
+        document.getElementById(i.toString()).style.fontStyle = "oblique";
+      } else {
+        document.getElementById(i.toString()).style.color = "black";
+        document.getElementById(i.toString()).style.borderLeft = "transparent";
+        document.getElementById(i.toString()).style.fontStyle = "normal";
+      }
+    }
+  }
+
 }

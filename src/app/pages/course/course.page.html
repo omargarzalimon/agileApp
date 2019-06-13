@@ -1,0 +1,46 @@
+<ion-header
+  no-border="no-border"
+  translucent="translucent"
+>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button
+        mode="ios"
+        name="ios-menu-outline"
+      ></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title
+      text-capitalize="text-capitalize"
+      color="m1"
+    >Course</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item class="backModule">
+      <ion-label class="module">Module 1</ion-label>
+    </ion-item>
+
+    <div class="unitHeader">
+        <ion-list-header class="ion-no-padding">
+            <ion-label class="units ion-text-capitalize">Unit 1</ion-label>
+        </ion-list-header>
+    </div>
+    
+
+     <ion-item class="itemsUnit" *ngFor="let item of course.modulos[0].unidades[0].content" 
+     [routerLink]="item.route" detail="false">
+      <ion-icon
+        mode="ios"
+        [name]="item.icon"
+        slot="start"
+        [color]="item.color"
+      ></ion-icon>
+      <ion-label [color]="item.color">{{item.title}}</ion-label>
+     
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

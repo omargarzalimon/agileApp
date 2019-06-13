@@ -7,15 +7,22 @@ const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
-  },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  },
-  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' }
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'course', loadChildren: './pages/course/course.module#CoursePageModule' },
+  { path: 'dashboard3', loadChildren: './pages/dashboard3/dashboard3.module#Dashboard3PageModule' },
+  { path: 'lesson', loadChildren: './pages/lesson/lesson.module#LessonPageModule' },
+  { path: 'videos', loadChildren: './pages/videos/videos.module#VideosPageModule' },
+  { path: 'exercise', loadChildren: './pages/exercise/exercise.module#ExercisePageModule' },
+  { path: 'infographic', loadChildren: './pages/infographic/infographic.module#InfographicPageModule' },
+  { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },
+  { path: 'glossary', loadChildren: './pages/glossary/glossary.module#GlossaryPageModule' },
+  { path: 'photo-profile', loadChildren: './pages/photo-profile/photo-profile.module#PhotoProfilePageModule' },
+  { path: 'privacy-policy', loadChildren: './pages/privacy-policy/privacy-policy.module#PrivacyPolicyPageModule' },
+  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' }
+
+
+
+
 ];
 
 @NgModule({

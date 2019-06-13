@@ -1,15 +1,17 @@
 <ion-app>
   <ion-split-pane>
     <ion-menu style="width: 100%;">
-      <ion-header no-border>
+      <ion-header no-border style=" border-right: solid 2px #f55000;">
         <ion-toolbar >
-          <!-- <ion-title>Menu</ion-title> -->
+          <!--<div style="color: #f55000; text-align:right; width: 100%; font-size: 60px; ">
+              <ion-icon mode="ios" name="arrow-round-back"></ion-icon>
+          </div>-->
         </ion-toolbar>
       </ion-header>
-      <ion-content scrollY="false">
+      <ion-content scrollY="false" style="border-right: solid 2px #f55000;">
         <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" lines="none" detail="false">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages" >
+            <ion-item class="desseleccionadoMenu" [routerDirection]="'root'" [routerLink]="[p.url]" lines="none" [id]="p.index" (click)="seleccion(p.index)" detail="false">
               <ion-label>
                 {{p.title}}
               </ion-label>
@@ -18,11 +20,10 @@
         </ion-list>
         <ion-footer no-border >
           <ion-toolbar>
-              <ion-img style="width: 30%;margin: 0 auto;" src="../assets/imgs/agile.svg"></ion-img>
           </ion-toolbar>
         </ion-footer>
           
-       
+        <ion-img style="width: 30%;margin: 0 auto;" src="../assets/imgs/agile.svg" style="position: absolute; width: 100px; bottom:5%; left:30%;"></ion-img>       
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
