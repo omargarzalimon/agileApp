@@ -20,9 +20,9 @@
   </div>
   <div id="avatar" >
       <ion-avatar id="img-profile"  >
-        <img   src="../../../assets/imgs/wen@2x.png">
+        <img   [src]="foto || '../../../assets/imgs/wen@2x.png'">
       </ion-avatar> 
-      <button  id="add-img-profile">    
+      <button  id="add-img-profile" (click)="hacerFoto()" >    
        <ion-icon style="display:initial"  color="m1" mode="ios"  name="camera"></ion-icon>
       </button >
 
