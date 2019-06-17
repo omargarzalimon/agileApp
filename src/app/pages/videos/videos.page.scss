@@ -1,0 +1,63 @@
+#prueba ion-col {
+    border: 1px solid;
+    border-color: var(--ion-color-danger);
+}
+
+/* CONTENEDOR  ESTILOS*/
+
+ion-content, ion-grid, ion-label, ion-col, .item-native, .item-inner {
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-left: 0px!important;
+    margin-left: 0px!important;
+    padding-right: 0px!important;
+    margin-right: 0px!important;
+}
+
+/* HEADER  ESTILOS*/
+ion-menu-button{
+    --color: var(--ion-color-m1);
+}
+
+ion-header ion-title {
+    color:  var(--ion-color-m1);
+    text-align: center;
+}
+
+/* CONTENIDO  ESTILOS VIDEOS*/
+ion-content ion-title, ion-content p  {
+    position: relative;
+    font-size: 1.3em;
+    text-align: left;
+    font-family: 'IBM Plex Sans Medium';
+    color: var(--ion-color-s3); 
+}
+
+ion-content ion-title {
+    letter-spacing: .02em;
+    padding: 15px 0px 10px 0px;
+}
+
+ion-content p {
+    color: var(--ion-color-m1); 
+    padding-top: 0;
+    margin-top: 0;
+}
+
+ion-col {
+    border-top: 1px solid;
+    border-color: var(--ion-color-m1);
+}
+
+.videodesc{
+    padding: 0 5%;
+}
+
+video {
+    width: 100%;
+}
+
+ion-col.videoseen ion-title, ion-col.videoseen p {
+    font-family: 'IBM Plex Sans Condensed Bold'!important;
+    font-style: italic;
+}
