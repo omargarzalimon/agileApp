@@ -26,7 +26,7 @@ export class CoursePage implements OnInit {
                   icon: 'videocam',
                   title: 'Donec quis enim sagittis',
                   color: 's6',
-                  route: '/login'
+                  route: '/videos'
                 },
                 {
                   icon: 'logo-game-controller-b',

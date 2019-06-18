@@ -1,9 +1,58 @@
-<ion-header>
+<ion-header
+  no-border="no-border"
+  translucent="translucent"
+>
   <ion-toolbar>
-    <ion-title>videos</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button
+        mode="ios"
+        name="ios-menu-outline"
+      ></ion-menu-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/" color="m1"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title
+      text-capitalize="text-capitalize"
+      color="m1"
+    >Videos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content id="" no-padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md class="videoseen">
+          <ion-img src="../assets/imgs/dashboard_backgroundvideo.png" routerLink="/videoplay"></ion-img>
+            <div class="videodesc">
+              <ion-title>Agile Organizations and Method</ion-title>
+              <p>12:29</p>
+            </div>
+        </ion-col>
+        <ion-col size="12" size-md>
+            <ion-img src="../assets/imgs/dashboard_background3.png" routerLink="/videoplay"></ion-img>
+              <div class="videodesc">
+                <ion-title>Agile Principles</ion-title>
+                <p>15:04</p>
+              </div>
+          </ion-col>
+        <ion-col size="12" size-md>
+            <ion-img src="../assets/imgs/dashboard_backgroundvideo4c.png" routerLink="/videoplay"></ion-img>
+              <div class="videodesc">
+                <ion-title>Agile Principles</ion-title>
+                <p>15:04</p>
+             </div>
+          </ion-col>    
+        <ion-col size="12" size-sm>
+          <ion-img src="../assets/imgs/dashboard_backgroundvideo.png" routerLink="/videoplay"></ion-img>
+            <div class="videodesc">
+              <ion-title>Agile Principles</ion-title>
+              <p>15:04</p>
+            </div>
+        </ion-col>
+      </ion-row>
 
+    </ion-grid>
 </ion-content>
