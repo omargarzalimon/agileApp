@@ -9,7 +9,7 @@ ion-content{
 
 #agileLogoRow{
     margin-top:25%;
-    height: 70%;
+    height: 85%;
 }
 
 #formLog{
@@ -34,15 +34,18 @@ ion-item ion-label{
 }
 
 ion-footer{
-    margin-bottom: 10%;
-    position: relative;
+    padding-bottom: 10%;
 }
 
 #footImg{
-    width: 30%;
+    width: 40%;
     margin: 0 auto;
 }
 
 .scroll-content{
     padding-bottom: 0 !important;
+}
+
+#colLogo{
+    margin-top: 50%;
 }
