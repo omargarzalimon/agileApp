@@ -8,44 +8,42 @@
       ></ion-menu-button>
     </ion-buttons>
 
-    <ion-item lines="none">
+    <ion-item lines="none" *ngFor='let user of usuario | async'>
       <ion-col no-border="no-border">
         <div class="ion-text-right">
-          <ion-label id="puntos" color="c7"><ion-icon mode="ios" name="medal" class="icono"></ion-icon>1300 pts</ion-label>
+          <ion-label id="puntos" color="c7"><ion-icon mode="ios" name="medal" class="icono"></ion-icon>{{ user.points }} pts</ion-label>
         </div>
       </ion-col>
     </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content scrollY="false">
+<ion-content scrollY="false" *ngFor="let user of usuario | async">
 
   <ion-grid >
     <ion-row>
-      <ion-col size="12" class="ion-no-padding">
-          <div id="flame">
-            <ion-icon mode="ios" name="flame"></ion-icon>
-          </div>
-          <ion-progress-bar id="porcentaje" value="0.3" ></ion-progress-bar>
+      <ion-col [size]="(user.advance/100*12)" class="ion-no-padding" style="text-align: right">
+            <ion-icon id="flame" mode="ios"  name="flame"></ion-icon>
       </ion-col>
+      <ion-progress-bar id="porcentaje" [value]="(user.advance/100)" ></ion-progress-bar>
     </ion-row>
   </ion-grid>
 
-  <ion-grid id="contenedor">
+  <ion-grid id="contenedor" >
     <ion-row>
       <ion-col size="7" class="rejilla">
-        <div class="prueba">
+      <div class="prueba">
         <div class="profile">
           <img id="imgporfile" src="../../assets/imgs/wen.png" alt="">
         </div>
-        <div id="addph">
+        <div id="addph" [routerLink]="['/photo-profile']">
           <ion-icon mode="ios" name="add"></ion-icon>
         </div>
       </div>
         <br>
         <div>
-          <ion-label class="name">Wendy</ion-label>&nbsp;
-          <ion-label class="lname">Herrera</ion-label>
+          <ion-label class="name">{{ user.name }} </ion-label>&nbsp;
+          <ion-label class="lname">{{ user.lastname }}</ion-label>
         </div>
       </ion-col>
 

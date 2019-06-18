@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard3',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Dashboard3Page implements OnInit {
 
-  constructor() { }
+  usuario: Observable<any>;
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.usuario = this.dataService.getProfileById();
   }
 
 }
