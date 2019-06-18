@@ -22,6 +22,11 @@ export class PhotoProfilePage implements OnInit {
     });
   }
 
+  acceptPhoto()
+  {
+    console.log('guardar img');
+  }
+
   ngOnInit() {
   }
 
