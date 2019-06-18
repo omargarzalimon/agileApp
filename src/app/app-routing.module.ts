@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'glossary', loadChildren: './pages/glossary/glossary.module#GlossaryPageModule' },
   { path: 'photo-profile', loadChildren: './pages/photo-profile/photo-profile.module#PhotoProfilePageModule' },
   { path: 'privacy-policy', loadChildren: './pages/privacy-policy/privacy-policy.module#PrivacyPolicyPageModule' },
-  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' }
+  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },  { path: 'loading', loadChildren: './pages/loading/loading.module#LoadingPageModule' }
+
 
 
 
