@@ -29,12 +29,12 @@
     </ion-row>
   </ion-grid>
 
-  <ion-grid id="contenedor" >
-    <ion-row>
+  <ion-grid style="height: 100%" id="contenedor" >
+    <ion-row style="height: 100%">
       <ion-col size="7" class="rejilla">
       <div class="prueba">
         <div class="profile">
-          <img id="imgporfile" src="../../assets/imgs/wen.png" alt="">
+          <img id="imgporfile" [src]="user.photo" alt="">
         </div>
         <div id="addph" [routerLink]="['/photo-profile']">
           <ion-icon mode="ios" name="add"></ion-icon>
@@ -49,20 +49,28 @@
 
       <ion-col size="5" class="rejilla2">
         <div class="options" [routerLink]="['/lesson']">
-          <ion-icon mode="ios" class="iconoption" name="bookmarks"></ion-icon><br>
+          <div style="line-height: 15px;">
+          <ion-icon mode="ios" class="iconoption" name="bookmarks" ></ion-icon><br>
           <ion-label>The Agile<br>Principales</ion-label>
+          </div>
         </div>
         <div class="options" [routerLink]="['/course']">
+          <div style="line-height: 15px;">
           <ion-icon mode="ios" class="iconoption" name="flag"></ion-icon><br>
           <ion-label>Agile Organizations<br>and Method</ion-label>
+          </div>
         </div>
         <div class="options">
+          <div style="line-height: 15px;">          
           <ion-icon mode="ios" class="iconoption" name="chatbubbles"></ion-icon><br>
           <ion-label>Share your<br>results with...</ion-label>
+          </div>
         </div>
         <div class="options ultimaop">
+          <div style="line-height: 15px;"> 
           <ion-icon mode="ios" class="iconoption" name="calendar"></ion-icon><br>
           <ion-label>The next<br>Monday</ion-label>
+          </div>
         </div>
       </ion-col>
     </ion-row>
