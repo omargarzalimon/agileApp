@@ -73,15 +73,11 @@ ion-toolbar{
 .rejilla{
     text-align: center;
     height: 100%;
-    border: solid 1px #F55000;
-    border-left: transparent;
-    border-right: transparent;
-    border-bottom: transparent;
+    border-top: solid 1px #F55000;
 }
 .rejilla2{
     height: 100%;
     padding: 0px;
-    border-left: solid 1px #F55000;
 }
 .iconoption{
     color: #F55000;
@@ -89,18 +85,19 @@ ion-toolbar{
 }
 .options{
     width: 100%;
-    height: 100%;
-    padding-top: 8%;
-    padding-bottom: 8%;
+    height: 22%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "IBM Plex Sans Condensed Regular";
     text-align: center;
     color: #2A323F;
     border: solid 1px #F55000;
     border-right: transparent;
-    border-left: transparent;
     border-bottom: transparent;
     margin: 0px;
-    font-size: 15px
+    font-size: 15px;
 }
 .ultimaop{
     border-bottom: solid 1px #F55000;
@@ -109,7 +106,7 @@ ion-toolbar{
     background-image: url('../../../assets/imgs/dashboard_background_DASH.png');
     background-repeat: no-repeat, repeat;
     background-color: white;
-    background-position: 80% -10%;
+    background-position: 80% 10%;
     height: 100%;
     text-align: center;
 }
