@@ -16,6 +16,7 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
+import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
     FileTransfer,
     DocumentViewer,
     TextToSpeech,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    PhotoViewer
   ],
   bootstrap: [AppComponent]
 })
