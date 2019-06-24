@@ -1,4 +1,4 @@
-<ion-header  no-border="no-border" >
+<!-- <ion-header  no-border="no-border" >
   <ion-toolbar>
     <ion-buttons slot="start" >
       <ion-menu-button
@@ -11,14 +11,94 @@
     <ion-item lines="none" *ngFor='let user of usuario | async'>
       <ion-col no-border="no-border">
         <div class="ion-text-right">
-          <ion-label id="puntos" color="c7"><ion-icon mode="ios" name="medal" class="icono"></ion-icon>{{ user.points }} pts</ion-label>
+          <ion-label id="puntos" color="c7"><ion-icon mode="ios" name="medal" class="icono"></ion-icon>100000 pts</ion-label>
+           <ion-label id="puntos" color="c7"><ion-icon mode="ios" name="medal" class="icono"></ion-icon>{{ user.points }} pts</ion-label> 
+        </div>
+      </ion-col>
+    </ion-item>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header  no-border="no-border" >
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-menu-button
+        mode="ios"
+        name="ios-menu-outline"
+        max-width="90px"
+      ></ion-menu-button>
+    </ion-buttons>
+
+    <ion-item lines="none">
+      <ion-col no-border="no-border">
+        <div class="ion-text-right">
+          <ion-label id="puntos" color="c7"><ion-icon mode="ios" name="medal" class="icono"></ion-icon>100000 pts</ion-label>
         </div>
       </ion-col>
     </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content scrollY="false" *ngFor="let user of usuario | async">
+<ion-content scrollY="false">
+
+  <ion-grid >
+    <ion-row>
+      <ion-col [size]="2" class="ion-no-padding" style="text-align: right">
+            <ion-icon id="flame" mode="ios"  name="flame"></ion-icon>
+      </ion-col>
+      <ion-progress-bar id="porcentaje" [value]="0.15" ></ion-progress-bar>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid style="height: 100%" id="contenedor" >
+    <ion-row style="height: 100%">
+      <ion-col size="7" class="rejilla">
+      <div class="prueba">
+        <div class="profile">
+          <img id="imgporfile" src="../assets/imgs/wen.png" alt="">
+        </div>
+        <div id="addph" [routerLink]="['/photo-profile']">
+          <ion-icon mode="ios" name="add"></ion-icon>
+        </div>
+      </div>
+        <br>
+        <div>
+          <ion-label class="name">Wen </ion-label>&nbsp;
+          <ion-label class="lname">Herrera</ion-label>
+        </div>
+      </ion-col>
+
+      <ion-col size="5" class="rejilla2">
+        <div class="options" [routerLink]="['/lesson']">
+          <div style="line-height: 15px;">
+          <ion-icon mode="ios" class="iconoption" name="bookmarks" ></ion-icon><br>
+          <ion-label>The Agile<br>Principales</ion-label>
+          </div>
+        </div>
+        <div class="options" [routerLink]="['/course']">
+          <div style="line-height: 15px;">
+          <ion-icon mode="ios" class="iconoption" name="flag"></ion-icon><br>
+          <ion-label>Agile Organizations<br>and Method</ion-label>
+          </div>
+        </div>
+        <div class="options">
+          <div style="line-height: 15px;">          
+          <ion-icon mode="ios" class="iconoption" name="chatbubbles"></ion-icon><br>
+          <ion-label>Share your<br>results with...</ion-label>
+          </div>
+        </div>
+        <div class="options ultimaop">
+          <div style="line-height: 15px;"> 
+          <ion-icon mode="ios" class="iconoption" name="calendar"></ion-icon><br>
+          <ion-label>The next<br>Monday</ion-label>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<!-- <ion-content scrollY="false" *ngFor="let user of usuario | async">
 
   <ion-grid >
     <ion-row>
@@ -76,4 +156,4 @@
     </ion-row>
   </ion-grid>
 
-</ion-content>
+</ion-content> -->
