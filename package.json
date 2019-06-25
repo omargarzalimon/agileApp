@@ -96,7 +96,7 @@
       },
       "cordova-plugin-file-transfer": {},
       "cordova-plugin-document-viewer": {},
-      "cordova-plugin-tts": {}
+      "cordova-plugin-tts": {},
       "com-sarriaroman-photoviewer": {}
     },
     "platforms": [
