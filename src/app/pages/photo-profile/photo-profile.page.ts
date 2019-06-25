@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-photo-profile',
@@ -8,9 +9,9 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 })
 export class PhotoProfilePage implements OnInit {
   foto: any;
-
-  constructor(private camera: Camera) {}
-
+  public jsonphoto;
+  constructor(private camera: Camera, private dataService: DataService ) {}
+   
   hacerFoto() {
     const options: CameraOptions = {
     destinationType: this.camera.DestinationType.DATA_URL
@@ -22,9 +23,13 @@ export class PhotoProfilePage implements OnInit {
     });
   }
 
-  acceptPhoto()
-  {
-    console.log('guardar img');
+  acceptPhoto(){
+    this.jsonphoto = [
+    {
+     photo: this.foto
+    }
+    ];
+    this.dataService.postImage(this.jsonphoto);
   }
 
   ngOnInit() {

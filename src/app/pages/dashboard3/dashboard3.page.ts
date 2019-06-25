@@ -14,7 +14,7 @@ export class Dashboard3Page implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    // this.usuario = this.dataService.getProfileById();
+     this.usuario = this.dataService.getProfileById();
   }
 
 }
