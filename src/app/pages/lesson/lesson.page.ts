@@ -20,7 +20,7 @@ export class LessonPage implements OnInit {
     private ft: FileTransfer,
     private fileOpener: FileOpener,
     private document: DocumentViewer,
-    private tts:TextToSpeech
+    private tts: TextToSpeech
     ) { }
 
 
