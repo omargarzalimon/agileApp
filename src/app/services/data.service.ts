@@ -19,8 +19,12 @@ export class DataService {
               private platform: Platform,
               private document: DocumentViewer
               ) { }
-  getProfileById() {
-    return this.http.get('http://gmodelo.freevar.com/agile/vendor/slim/slim/getProfile/1');
+  getProfileById(){
+    return this.http.get('https://www.charlesgym.com.mx/agile/vendor/slim/slim/getProfile/1');
+  }
+  
+  postImage(jsonphoto){
+    return this.http.get('http://gmodelo.freevar.com/agile/vendor/slim/slim/postImage',jsonphoto);
   }
   download(downloadUrl: string, title: string) {
     const url = this.file.dataDirectory + title + '.pdf';

@@ -1,4 +1,4 @@
-<!-- <ion-header  no-border="no-border" >
+<ion-header  no-border="no-border" >
   <ion-toolbar>
     <ion-buttons slot="start" >
       <ion-menu-button
@@ -11,14 +11,13 @@
     <ion-item lines="none" *ngFor='let user of usuario | async'>
       <ion-col no-border="no-border">
         <div class="ion-text-right">
-          <ion-label id="puntos" color="c7"><ion-icon mode="ios" name="medal" class="icono"></ion-icon>100000 pts</ion-label>
            <ion-label id="puntos" color="c7"><ion-icon mode="ios" name="medal" class="icono"></ion-icon>{{ user.points }} pts</ion-label> 
         </div>
       </ion-col>
     </ion-item>
   </ion-toolbar>
-</ion-header> -->
-<ion-header  no-border="no-border" >
+</ion-header> 
+<!--<ion-header  no-border="no-border" >
   <ion-toolbar>
     <ion-buttons slot="start" >
       <ion-menu-button
@@ -37,7 +36,8 @@
     </ion-item>
   </ion-toolbar>
 </ion-header>
-
+-->
+<!--
 <ion-content scrollY="false">
 
   <ion-grid >
@@ -97,8 +97,8 @@
   </ion-grid>
 
 </ion-content>
-
-<!-- <ion-content scrollY="false" *ngFor="let user of usuario | async">
+-->
+<ion-content scrollY="false" *ngFor="let user of usuario | async">
 
   <ion-grid >
     <ion-row>
@@ -156,4 +156,4 @@
     </ion-row>
   </ion-grid>
 
-</ion-content> -->
+</ion-content> 
