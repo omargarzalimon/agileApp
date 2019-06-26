@@ -34,6 +34,7 @@
       *ngFor="let item of glossary[0].unit"
       [routerLink]="item.route"
       detail="false"
+      (click)= "openLink(item.link.url, item.link.name, item.link.type)"
     >
       <ion-icon
         mode="ios"
