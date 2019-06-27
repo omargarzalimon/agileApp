@@ -15,14 +15,14 @@
  
   </ion-toolbar>
 </ion-header>
-<ion-content  >
+<ion-content  *ngFor='let user of usuario | async'>
   <div id="topcolor" >
   </div>
   <div id="avatar" >
       <ion-avatar id="img-profile"  >
-        <img   src="../../../assets/imgs/wen@2x.png">
+        <img [src]="(user.photo)">
       </ion-avatar> 
-      <button  id="add-img-profile">    
+      <button id="add-img-profile">    
        <ion-icon style="display:initial" routerLink="/photo-profile"  color="m1" mode="ios"  name="add"></ion-icon>
       </button >
 
@@ -37,7 +37,7 @@
               </ion-col>
               <ion-col size="7" >
                   <ion-text color="m1"  >
-                    <p style="font-size: 30px;font-weight: bold" >{{profile[5].data}} pts</p>
+                    <p style="font-size: 30px;font-weight: bold" >{{user.points}} pts</p>
                   </ion-text>
               </ion-col>
             </ion-row>
@@ -49,13 +49,13 @@
            
        
           
-        <ion-col  [size]="(profile[6].data*12)"  >
+        <ion-col  [size]="(user.advance/100*12)"  >
           
             <ion-icon id="flame" color="m1"   name="flame"></ion-icon>
 
           </ion-col>
        
-          <ion-progress-bar mode="md" color="m1" [value]="profile[6].data"></ion-progress-bar> 
+          <ion-progress-bar mode="md" color="m1" [value]="user.advance/100"></ion-progress-bar> 
             
         </ion-row>
         
@@ -65,15 +65,15 @@
    
    <ion-grid style="padding-left: 50px" >
     <ion-row style="height: 30px" ><p style="color:lightslategrey">ID</p></ion-row>
-     <ion-row style="height: 30px"><p>{{profile[0].data}}</p></ion-row>
+     <ion-row style="height: 30px"><p>{{user.sap}}</p></ion-row>
      <ion-row style="height: 30px" ><p style="color:lightslategrey">Name</p></ion-row>
-     <ion-row style="height: 30px"><p>{{profile[1].data}}</p></ion-row>
+     <ion-row style="height: 30px"><p>{{user.name}} {{user.lastname}}</p></ion-row>
      <ion-row style="height: 30px" ><p style="color:lightslategrey">E-mail</p></ion-row>
-     <ion-row style="height: 30px"><p>{{profile[2].data}}</p></ion-row>
+     <ion-row style="height: 30px"><p>{{user.email}}</p></ion-row>
      <ion-row style="height: 30px" ><p style="color:lightslategrey">Zone</p></ion-row>
-     <ion-row style="height: 30px"><p>{{profile[3].data}}</p></ion-row>
+     <ion-row style="height: 30px"><p>{{user.zone}}</p></ion-row>
      <ion-row style="height: 30px" ><p style="color:lightslategrey">Process</p></ion-row>
-     <ion-row style="height: 30px"><p>{{profile[4].data}}</p></ion-row>
+     <ion-row style="height: 30px"><p>{{user.process}}</p></ion-row>
    </ion-grid>
    <div style="height: 100px" >
     
