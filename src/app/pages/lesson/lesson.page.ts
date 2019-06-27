@@ -13,6 +13,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
   styleUrls: ['./lesson.page.scss'],
 })
 export class LessonPage implements OnInit {
+  public items: any = [];
+
 
   constructor(
     private platform: Platform,
@@ -21,7 +23,118 @@ export class LessonPage implements OnInit {
     private fileOpener: FileOpener,
     private document: DocumentViewer,
     private tts: TextToSpeech
-    ) { }
+    ) {
+      this.items = [
+        { expanded: false ,
+          nombre: 'Module 1',
+          unidades: [
+            { expanded: false,
+              name: 'Unit 1',
+              content: [
+                {
+                  icon: 'document',
+                  title: 'Morbi accumsan ultrices arcu',
+                  color: 's1',
+                  route: '/lesson'
+                },
+                {
+                  icon: 'videocam',
+                  title: 'Donec quis enim sagittis',
+                  color: 's6',
+                  route: '/videos'
+                },
+                {
+                  icon: 'logo-game-controller-b',
+                  title: 'Integer iaculis justo eget',
+                  color: 's7',
+                  route: '/exercise'
+                },
+                {
+                  icon: 'image',
+                  title: 'Lorem ipsum dolor sit amet',
+                  color: 'm2',
+                  route: '/infographic'
+                },
+                {
+                  icon: 'document',
+                  title: 'Nunc gravida pulvinar urna',
+                  color: 's3',
+                  route: '/login'
+                }
+              ]
+            },
+            { expanded: false,
+              name: 'Unit 2',
+              content: [
+                {
+                  icon: 'document',
+                  title: 'Morbi accumsan ultrices arcu',
+                  color: 's1'
+                }
+              ]
+            }
+          ]
+        },
+        { expanded: false,
+          nombre: 'Module 2',
+          unidades: [
+            {
+              name: 'Unit 1',
+              content: [
+                {
+                  icon: 'document',
+                  title: 'Morbi accumsan ultrices arcu',
+                  color: 's1'
+                },
+                {
+                  icon: 'videocam',
+                  title: 'Morbi accumsan ultrices arcu',
+                  color: 's1'
+                }
+              ]
+            },
+            {
+              name: 'Unit 2',
+              content: [
+                {
+                  icon: 'document',
+                  title: 'Morbi accumsan ultrices arcu',
+                  color: 's1'
+                }
+              ]
+            }
+          ] },
+          { expanded: false,
+            nombre: 'Module 3',
+            unidades: [
+              {
+                name: 'Unit 1',
+                content: [
+                  {
+                    icon: 'document',
+                    title: 'Morbi accumsan ultrices arcu',
+                    color: 's1'
+                  },
+                  {
+                    icon: 'videocam',
+                    title: 'Morbi accumsan ultrices arcu',
+                    color: 's1'
+                  }
+                ]
+              },
+              {
+                name: 'Unit 2',
+                content: [
+                  {
+                    icon: 'document',
+                    title: 'Morbi accumsan ultrices arcu',
+                    color: 's1'
+                  }
+                ]
+              }
+            ]}
+      ];
+     }
 
 
 public TTS = [
@@ -50,22 +163,25 @@ public TTS = [
 
   ngOnInit() {
     this.tts.speak('');
+    document.getElementById('resume').style.color = 'var(--ion-color-m1)';
+    document.getElementById('resume').style.borderBottom = 'var(--ion-color-m1) 1px solid';
+
+
+
 
   }
 
-  ionViewWillLeave(){
-    console.log('leave');
+  ionViewWillLeave() {
     this.tts.speak('');
 
   }
-   
-   ngOnDestroy(){
-     console.log('destroy');
+
+   ngOnDestroy() {
      this.tts.speak('');
 
    }
 
-  openPDF(){
+  openPDF() {
     let filePath = this.file.applicationDirectory + 'www/assets/';
 
     if (this.platform.is('android')) {
@@ -100,4 +216,70 @@ public TTS = [
     });
   }
 
+ clicktab(tab) {
+  this.tts.speak('');
+  document.getElementById('resume').style.borderBottom = 'none';
+  document.getElementById('course').style.borderBottom = 'none';
+  document.getElementById('foroum').style.borderBottom = 'none';
+  document.getElementById('resume').style.color = 'var(--ion-color-base)';
+  document.getElementById('course').style.color = 'var(--ion-color-base)';
+  document.getElementById('foroum').style.color = 'var(--ion-color-base)';
+  document.getElementById(tab).style.borderBottom = 'var(--ion-color-m1) 1px solid';
+  document.getElementById(tab).style.color = 'var(--ion-color-m1)';
+  document.getElementById('divresume').style.display = 'none';
+  document.getElementById('divcourse').style.display = 'none';
+  document.getElementById('divforoum').style.display = 'none';
+
+  document.getElementById('div' + tab).style.display = 'inline-block';
+
+
+
+ }
+
+ expandItem(item): void {
+  if (item.expanded === true) {
+    item.expanded = false;
+  } else {
+      this.items.map(listItem => {
+      if (item === listItem) {
+          listItem.expanded = true;
+        } else {
+          listItem.expanded = false;
+        }
+      return listItem;
+     });
+  }
+}
+
+expandItem3(item, i, unidad): void {
+  if (item.expanded === true) {
+    item.expanded = false;
+
+    if (unidad.expanded === true) {
+      unidad.expanded = false;
+    } else {
+      this.items[i].unidades.map(listItem => {
+        if (unidad === listItem) {
+        listItem.expanded = true;
+      } else {
+          listItem.expanded = false;
+         }
+        return listItem;
+       });
+    }
+
+
+  } else {
+    this.items.map(listItem => {
+    if (item === listItem) {
+        listItem.expanded = true;
+      } else {
+        listItem.expanded = false;
+      }
+    return listItem;
+   });
+
+  }
+
+}
 }
