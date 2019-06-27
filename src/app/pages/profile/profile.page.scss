@@ -4,18 +4,21 @@
     background-color: #DA5813;
 }
 #avatar{
-    width: 55%;
-    margin: auto;
+    margin: 0px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 180px;
+    border: solid 1px  #F55000;
+    padding: 5px;
+    z-index: 2;
+    position: relative;
     margin-top: -125px;
-    max-width: 300px;
 }
 #img-profile{
-    margin:auto;
     width: 100%;
-    height: auto;
-    max-width: 300px;
-    border: 1px solid #DA5813;
-    padding: 10px;
+    height: 100%;
+    border-radius: 120px;
+    position: relative;
 }
 #add-img-profile{
     margin-top:-90px;
