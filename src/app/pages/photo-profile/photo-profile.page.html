@@ -15,12 +15,12 @@
  
   </ion-toolbar>
 </ion-header>
-<ion-content  >
+<ion-content  *ngFor='let user of usuario | async'>
   <div id="topcolor" >
   </div>
   <div id="avatar" >
       <ion-avatar id="img-profile"  >
-        <img   [src]="foto || '../../../assets/imgs/wen@2x.png'">
+        <img   [src]="foto || user.photo">
       </ion-avatar> 
       <button  id="add-img-profile" (click)="hacerFoto()" >    
        <ion-icon style="display:initial"  color="m1" mode="ios"  name="camera"></ion-icon>
