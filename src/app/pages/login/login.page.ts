@@ -18,9 +18,9 @@ export class LoginPage implements OnInit {
   }
 
   onSubmitTemplate(){
-    if (this.usuario.email === 'admin@gmodelo.com.mx' && this.usuario.password === 'admin') {
+    // if (this.usuario.email === 'admin@gmodelo.com.mx' && this.usuario.password === 'admin') {
       this.router.navigate(['/dashboard3']);
-    }
+    // }
   }
 
 }

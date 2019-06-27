@@ -48,7 +48,7 @@ export class InfographicPage implements OnInit {
     // }
   }
 
-   //View photo with sharing option
+   // View photo with sharing option
    viewPhoto(){
     const imageName = 'SCRUMMethodology.png';
     if (this.platform.is('ios')) {
@@ -56,14 +56,14 @@ export class InfographicPage implements OnInit {
       const downloadFolderName = 'tempDownloadFolder';
       this.file.checkDir(this.file.documentsDirectory, 'tempDownloadFolder').then(
         response => {
-          console.log(response);
+          console.log('Error: ' + response);
           if (response === true) {
             this.pv.show(ROOT_DIRECTORY + downloadFolderName + '/' + imageName);
           } else {
             this.file.createDir(ROOT_DIRECTORY, downloadFolderName, true)
             .then((entries) => {
               // Copy our asset/img/logo.jpg to folder we created
-              this.file.copyFile(this.file.applicationDirectory + 'www/assets/imgs/lesson/',
+              this.file.copyFile(this.file.applicationDirectory + 'www/assets/',
               imageName, ROOT_DIRECTORY + downloadFolderName + '/', imageName)
                 .then((entries) => {
                   this.pv.show(ROOT_DIRECTORY + downloadFolderName + '/' + imageName);
@@ -79,7 +79,23 @@ export class InfographicPage implements OnInit {
           }
         }
       ).catch(err => {
-        console.log(JSON.stringify(err));
+        this.file.createDir(ROOT_DIRECTORY, downloadFolderName, true)
+            .then((entries) => {
+              // Copy our asset/img/logo.jpg to folder we created
+              this.file.copyFile(this.file.applicationDirectory + 'www/assets/',
+              imageName, ROOT_DIRECTORY + downloadFolderName + '/', imageName)
+                .then((entries) => {
+                  this.pv.show(ROOT_DIRECTORY + downloadFolderName + '/' + imageName);
+                 })
+                .catch((error) => {
+                  alert('1 error ' + JSON.stringify(error));
+                  this.pv.show(ROOT_DIRECTORY + downloadFolderName + '/' + imageName);
+                });
+            })
+            .catch((error) => {
+              alert('2 error' + JSON.stringify(error));
+            });
+        console.log('jdhkas' + JSON.stringify(err));
       });
     } else if (this.platform.is('android')) {
       const ROOT_DIRECTORY = this.file.dataDirectory;

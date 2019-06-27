@@ -32,9 +32,10 @@
     <ion-item
       class="itemsUnit"
       *ngFor="let item of glossary[0].unit"
-      [routerLink]="item.route"
+      
       detail="false"
-    >
+      (click)= "openLink(item.link.url, item.link.name, item.link.type)"
+    ><!--[routerLink]="item.route"-->
       <ion-icon
         mode="ios"
         [name]="item.icon"
@@ -56,9 +57,10 @@
     <ion-item
       class="itemsUnit"
       *ngFor="let item of glossary[1].unit"
-      [routerLink]="item.route"
+      
       detail="false"
-    >
+      (click)= "openLink(item.link.url, item.link.name, item.link.type)"
+    ><!--[routerLink]="item.route"-->
       <ion-icon 
         mode="ios"
         [name]="item.icon"
