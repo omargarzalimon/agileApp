@@ -33,5 +33,65 @@ ion-content ion-title {
 
 #articlecontent p {
     line-height: 1.5em;
+    
 }
 
+#tabs{
+    border-bottom:var(--ion-color-m1) 1px solid;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+ion-menu-button{
+    --color: var(--ion-color-m1);
+}
+
+ion-item{
+    --min-height: 55px;
+}
+
+ion-item.backModule{
+    --background: rgba(174,181,188, 0.1);
+    --padding-start: 25px;
+}
+
+.module{
+    color: var(--ion-color-s6);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.unitHeader{
+    padding: 0 25px;
+}
+.text-module{
+    font-size: 18px;
+    padding: 10px 0 10px 26px;
+    color:#E42600;
+    font-weight: bolder;
+    
+}
+
+.unidad{
+    border-bottom: 1px solid var(--ion-color-s1);
+    margin-left:25px;
+    margin-right: 30px;
+    
+}
+
+.unidad-text{
+    font-weight:lighter;
+    font-size: 18px;
+    padding: 10px 0 10px 0px;
+    color:#2A323F;
+}
+
+.units{
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ion-color-s3);
+}
+
+.itemsUnit{
+    --padding-start: 35px;
+}

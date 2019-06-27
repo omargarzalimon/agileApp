@@ -16,8 +16,8 @@ export class AppComponent {
       index: 0
     },
     {
-      title: 'Course',
-      url: '/course',
+      title: 'Lesson',
+      url: '/lesson',
       index: 1
     },
     {
@@ -67,17 +67,16 @@ export class AppComponent {
     });
   }
 
-  seleccion(index){
-    
+  seleccion(index) {
     for (let i = 0; i < 8; i++) {
       if (i === index) {
-        document.getElementById(i.toString()).style.color = "#F55000";
-        document.getElementById(i.toString()).style.borderLeft = "solid 3px #F55000";
-        document.getElementById(i.toString()).style.fontStyle = "oblique";
+        document.getElementById(i.toString()).style.color = '#F55000';
+        document.getElementById(i.toString()).style.borderLeft = 'solid 3px #F55000';
+        document.getElementById(i.toString()).style.fontStyle = 'oblique';
       } else {
-        document.getElementById(i.toString()).style.color = "black";
-        document.getElementById(i.toString()).style.borderLeft = "transparent";
-        document.getElementById(i.toString()).style.fontStyle = "normal";
+        document.getElementById(i.toString()).style.color = 'black';
+        document.getElementById(i.toString()).style.borderLeft = 'transparent';
+        document.getElementById(i.toString()).style.fontStyle = 'normal';
       }
     }
   }

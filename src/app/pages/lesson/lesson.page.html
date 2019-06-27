@@ -37,7 +37,19 @@
         <ion-img src="../assets/imgs/lesson/header1_2x.png" (click)="openPDF()"></ion-img>
       </ion-col>
     </ion-row>
-
+  </ion-grid>
+  <ion-buttons id="tabs"  >
+      <ion-button  color="medium" style="width:33%" (click)="clicktab('course')" >
+          <ion-label id="course" style="font-weight: bolder;padding: 0 10px 4px 10px">Content</ion-label>
+        </ion-button>
+      <ion-button  color="medium" style="width:33%" (click)="clicktab('resume')"  >
+      <ion-label id="resume" style="font-weight: bolder;padding: 0 10px 4px 10px">Resume</ion-label>
+      </ion-button>
+      <ion-button  color="medium" style="width:33%" (click)="clicktab('foroum')" >
+        <ion-label id="foroum" style="font-weight: bolder;padding: 0 10px 4px 10px">Foroum</ion-label>
+      </ion-button>
+    </ion-buttons>
+<ion-grid id="divresume"  >
   <ion-row id="articlecontent">
           <ion-col size="12">
             <ion-title>The Agile Principles 
@@ -63,5 +75,57 @@
    
   
   </ion-grid>
+  <ion-grid id="divcourse"   >
+      <ion-row  >
+          <div style="height: fit-content;width: 100%;" (click)="expandItem(item)" *ngFor="let item of items;let i = index">
+              <ion-card-title class="text-module" style=" background-color:rgba(175, 181, 188, .15)"  >{{item.nombre}}</ion-card-title>
+              <div>
+                  <app-expandable expandHeight="600px" [expanded]="item.expanded">
+                    <div class="unidad" (click)="expandItem3(item,i,unidad)" *ngFor="let unidad of items[i].unidades;let j =index">
+                        <ion-card-title class="unidad-text" >{{unidad.name}}</ion-card-title>
+                        <div>
+                          <app-expandable  expandHeight="auto" [expanded]="items[i].unidades[j].expanded">
+                            <div (click)="expandItem(unidad)" *ngFor="let content of items[i].unidades[j].content;let h =index">
+                              <ion-card-title [color]="content.color" style="font-size: 18px;font-weight:lighter;font-size: 18px;padding: 15px 0 15px 26px" ><ion-icon style="font-size: 28px;padding-right:15px"  [name]="content.icon"></ion-icon><ion-label class="ion-padding">{{content.title}}</ion-label></ion-card-title>
+                            </div>
+                          </app-expandable>
+                        </div>
+                        
+                    </div>
+                  </app-expandable>
+              </div>
+            </div>
+      
+       
+      </ion-row>
+      </ion-grid>
+      <ion-grid id="divforoum"  >
+        <ion-row id="articlecontent">
+                <ion-col size="12">
+                  <ion-title>foroum 
+                    <ion-button (click)="downloadPDF()" fill="clear" class="ion-no-margin">
+                      <ion-icon color="m1" slot="icon-only" name="download"></ion-icon>
+                    </ion-button>
+                  </ion-title>
+                  
+                </ion-col>
+      
+            <ion-col size="12">
+                <p id="l1t1" (dblclick)="playText(TTS[1].data)">
+                  {{TTS[1].data}}
+                
+                </p>
+                <ion-img src="../assets/imgs/lesson/agileimg.png"></ion-img> 
+                <p>
+                  Vivamus aliquam elit erat, tristique vestibulum libero tempus sed. Aenean ultricies diam ut interdum malesuada. Quisque diam nisi, auctor vitae felis vel, vehicula venenatis mi. Aliquam convallis ex et velit egestas pharetra. Nullam scelerisque, libero id consequat commodo, enim sapien lacinia mi, ut elementum augue dui et odio. Nulla sollicitudin arcu mi, sed pellentesque massa consectetur ut. Suspendisse ultricies tempor risus sed tempus. Proin tempor, odio a sollicitudin hendrerit, lectus lacus aliquam dui, sed fringilla libero justo quis ligula. Ut cursus metus justo, non hendrerit neque mollis sit amet. Sed in ligula ut mi convallis volutpat. Ut at porttitor ex, quis dictum nisl. Morbi ac enim sed felis dictum lobortis. Donec pretium ultrices leo, quis hendrerit leo. Donec posuere urna fringilla accumsan ultricies.
+                </p>
+            </ion-col>
+        </ion-row>
+        
+         
+        
+        </ion-grid>
+
+  
   
 </ion-content>
