@@ -16,11 +16,10 @@ export class GlossaryPage implements OnInit {
           icon: 'attach',
           text: 'Consectetur adipiscing elit',
           color: 's1',
-          // link: 'https://elearningtest2019.000webhostapp.com/AGILE.pdf'
           link: {
-            url: 'https://elearningtest2019.000webhostapp.com/AGILE.pdf',
+            url: 'https://www.charlesgym.com.mx/agile/AGILE.pdf',
             name: 'AgilePDF',
-            type: 'download'
+            type: '.pdf'
           }
         },
         {
@@ -28,15 +27,20 @@ export class GlossaryPage implements OnInit {
           text: 'Consectetur adipiscing elit',
           color: 's1',
           link: {
-            url: 'https://www.google.com',
-            name: 'Google',
-            type: 'open'
+            url: 'https://www.charlesgym.com.mx/agile/PortadaAgile_1.mp4',
+            name: 'MP4',
+            type: '.mp4'
           }
         },
         {
           icon: 'attach',
           text: 'Consectetur adipiscing elit',
-          color: 's1'
+          color: 's1',
+          link: {
+            url: 'https://www.charlesgym.com.mx/agile/AGILE-%20induccion%20_all%202.0.pptx',
+            name: 'PPTX',
+            type: '.pptx'
+          }
         }
       ]
     },
@@ -45,17 +49,42 @@ export class GlossaryPage implements OnInit {
         {
           icon: 'attach',
           text: 'Consectetur adipiscing elit',
-          color: 's1'
+          color: 's1',
+          link: {
+            url: 'https://www.charlesgym.com.mx/agile/GB%20phase%201.docx',
+            name: 'DOCX',
+            type: '.docx'
+          }
         },
         {
           icon: 'attach',
           text: 'Consectetur adipiscing elit',
-          color: 's1'
+          color: 's1',
+          link: {
+            url: 'https://www.charlesgym.com.mx/agile/fondoagile.png',
+            name: 'PNG',
+            type: '.png'
+          }
         },
         {
           icon: 'link',
           text: 'Consectetur adipiscing elit',
-          color: 's1'
+          color: 's1',
+          link: {
+            url: 'https://www.charlesgym.com.mx/agile/DefineSummary.jpg',
+            name: 'JPG',
+            type: '.jpg'
+          }
+        },
+        {
+          icon: 'link',
+          text: 'Consectetur adipiscing elit',
+          color: 's1',
+          link: {
+            url: 'https://www.charlesgym.com.mx/agile/Minitab%20ejercicio%20controltab.zip',
+            name: 'ZIP',
+            type: '.zip'
+          }
         }
       ]
     }
@@ -74,7 +103,7 @@ export class GlossaryPage implements OnInit {
     console.log('hdkajshdkajh');
     } else {
       console.log('URL: ' + url +  '  NAME: ' + name);
-      this.dataService.download(url, name);
+      this.dataService.download(url, name, type);
     }
   }
 
