@@ -17,7 +17,8 @@ import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
-
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -40,7 +41,9 @@ import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
     FileTransfer,
     DocumentViewer,
     TextToSpeech,
-    PhotoViewer
+    PhotoViewer,
+    InAppBrowser,
+    DataService
   ],
   bootstrap: [AppComponent]
 })
