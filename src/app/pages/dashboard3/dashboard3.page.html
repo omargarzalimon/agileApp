@@ -114,7 +114,10 @@
       <ion-col size="7" class="rejilla">
       <div class="prueba">
         <div class="profile">
-          <img id="imgporfile" [src]="(user.photo)" alt="">
+          <ion-avatar id="imgporfile"  >
+            <img [src]="(user.photo)">
+          </ion-avatar> 
+          <!--<img id="imgporfile" [src]="(user.photo)" alt="">-->
         </div>
         <div id="addph" [routerLink]="['/photo-profile']">
           <ion-icon mode="ios" name="add"></ion-icon>
