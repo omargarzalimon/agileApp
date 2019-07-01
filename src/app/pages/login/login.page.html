@@ -10,13 +10,16 @@
 </ion-header> -->
 <!-- <app-header titulo="Login"></app-header> -->
 
-<ion-content scrollY="false">
+<ion-content scrollY="false" >
   <ion-grid>
     <ion-row id="agileLogoRow" align-items-center>
       <ion-col size="12">
         <ion-img src="../assets/imgs/agile.svg"></ion-img>
       </ion-col>
       <ion-col size="12" id="formLog">
+          <div id='menssageError'> 
+              <label>Email or Password Incorrect</label>
+            </div>
           <form
           #formulario="ngForm"
           (ngSubmit)="onSubmitTemplate()"
@@ -26,25 +29,23 @@
               
               <ion-label position="floating">Email</ion-label>
               <ion-input
+                id="email"
                 type="email"
                 name="email"
                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
                 [(ngModel)]="usuario.email"
                 required
                 mode="ios"
-                value="admin@gmodelo.com.mx"
               ></ion-input>
               
             </ion-item>
             <ion-item>
                 <ion-label position="floating">Password</ion-label>
-        
                 <ion-input
                   type="password"
                   name="password"
                   [(ngModel)]="usuario.password"
                   required
-                  value="admin"
                 ></ion-input>
               </ion-item>
           </ion-list>
