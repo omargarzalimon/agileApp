@@ -3,6 +3,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { DataService } from '../../services/data.service';
 import { Observable } from 'rxjs';
 import { Storage } from '@ionic/storage';
+import { LoadingController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-photo-profile',
@@ -15,7 +17,7 @@ export class PhotoProfilePage implements OnInit {
   public jsonphoto;
   fotoc: Observable<any>;
   usuario: Observable<any>;
-  constructor(private camera: Camera, private dataService: DataService, private storage: Storage ) {
+  constructor(private camera: Camera, private dataService: DataService, private storage: Storage, private loadingController: LoadingController, private router: Router) {
     this.storage.get('id').then((val) => {
       this.userId = val;
       this.usuario = this.dataService.getProfileById(this.userId);
@@ -34,12 +36,31 @@ export class PhotoProfilePage implements OnInit {
   }
 
   acceptPhoto(){
-    this.dataService.postImage(this.foto)
+    this.presentLoading();
+    this.dataService.postImage(this.userId,this.foto)
     .subscribe(console.log);
+  }
+
+  declinePhoto(){
+    this.router.navigate(['/profile']);
   }
 
   ngOnInit() {
     
   }
 
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      message: 'Uploading...',
+      duration: 5000
+    });
+    await loading.present();
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+    location.replace('/profile');
+    //this.router.navigate(['/profile']);
+  }
+
+
 }
+

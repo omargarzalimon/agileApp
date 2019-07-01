@@ -27,14 +27,14 @@ export class DataService {
   getProfileByEmail(email){
     return this.http.get('https://www.charlesgym.com.mx/agile/vendor/slim/slim/getProfileEmail/'+ email );
   }
-  postImage(photoshida){
+  postImage(userId,photoshida){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     this.jphoto = {
       "photo" : photoshida ,
     };
     console.log(photoshida);
-    return this.http.post('https://www.charlesgym.com.mx/agile/vendor/slim/slim/postImage',JSON.stringify(this.jphoto));
+    return this.http.post('https://www.charlesgym.com.mx/agile/vendor/slim/slim/postImage/'+ userId ,JSON.stringify(this.jphoto));
   }
   download(downloadUrl: string, title: string, type: string) {
     const mime = this.checkMIME(type);
