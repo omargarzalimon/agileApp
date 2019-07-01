@@ -8,6 +8,8 @@ import { IonicModule } from '@ionic/angular';
 import { PhotoProfilePage } from './photo-profile.page';
 import { ComponentsModule } from '../../components/components.module';
 import { Camera } from '@ionic-native/camera/ngx';
+import { IonicStorageModule } from '@ionic/storage';
+
 const routes: Routes = [
   {
     path: '',
@@ -21,7 +23,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    ComponentsModule
+    ComponentsModule,
+    IonicStorageModule.forRoot()
   ],
   providers:[
     Camera

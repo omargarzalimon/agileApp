@@ -21,8 +21,11 @@ export class DataService {
               private platform: Platform,
               private document: DocumentViewer
               ) { }
-  getProfileById(){
-    return this.http.get('https://www.charlesgym.com.mx/agile/vendor/slim/slim/getProfile/1');
+  getProfileById(userId){
+    return this.http.get('https://www.charlesgym.com.mx/agile/vendor/slim/slim/getProfile/' + userId);
+  }
+  getProfileByEmail(email){
+    return this.http.get('https://www.charlesgym.com.mx/agile/vendor/slim/slim/getProfileEmail/'+ email );
   }
   postImage(photoshida){
     let headers = new Headers();
